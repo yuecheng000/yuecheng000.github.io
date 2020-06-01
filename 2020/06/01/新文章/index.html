@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="六一快乐," />
 
 
 
@@ -79,13 +79,52 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="​    《Http响应协议&amp;Servlet入门-笔记》 回顾 软件的架构有哪两种 BS：浏览器服务器模式 Browser Server CS：客户端服务器模式 Client Server   WEB资源分成哪两种 动态 静态   Tomcat的安装需要配置哪2个环境变量 CATALINA_HOME&#x3D;安装目录 Path&#x3D;%CATALINA_HOME%\bin   Tomcat项目发布的三种">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新文章">
+<meta property="og:url" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​    《Http响应协议&amp;Servlet入门-笔记》 回顾 软件的架构有哪两种 BS：浏览器服务器模式 Browser Server CS：客户端服务器模式 Client Server   WEB资源分成哪两种 动态 静态   Tomcat的安装需要配置哪2个环境变量 CATALINA_HOME&#x3D;安装目录 Path&#x3D;%CATALINA_HOME%\bin   Tomcat项目发布的三种">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419091550859.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419092031980.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/assets/image-20200419093149530.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/assets/image-20200419093358488.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/assets/image-20200419093552992.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/assets/image-20200419093642446.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/assets/image-20200419093725376.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419094436407.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419094520264.png">
+<meta property="og:image" content="f:/课程资料集合/JavaWeb课件/day08(Http协议&Servlet入门)/讲义/assets/1552645116046.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419095456168.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419095640126.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419095821535.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419101859680.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/1552390081885.png">
+<meta property="og:image" content="f:/课程资料集合/JavaWeb课件/day08(Http协议&Servlet入门)/讲义/assets/1552390098127.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/1552390139905.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419103705556.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/1552391203018.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419105052687.png">
+<meta property="og:image" content="f:/课程资料集合/JavaWeb课件/day08(Http协议&Servlet入门)/讲义/assets/image-20200419111424542.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419112534840.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419141039060.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419141209412.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/1552393738408.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419142755106.png">
+<meta property="og:image" content="f:/课程资料集合/JavaWeb课件/day08(Http协议&Servlet入门)/讲义/assets/1552394436903.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419143919773.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419144220350.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419145021297.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419150006897.png">
+<meta property="og:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419151713719.png">
+<meta property="og:image" content="f:/课程资料集合/JavaWeb课件/day08(Http协议&Servlet入门)/讲义/assets/1552645116046.png">
+<meta property="article:published_time" content="2020-06-01T03:20:07.000Z">
+<meta property="article:modified_time" content="2020-06-01T03:23:36.751Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="六一快乐">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="f:/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/JavaWeb%E8%AF%BE%E4%BB%B6/day08(Http%E5%8D%8F%E8%AE%AE&Servlet%E5%85%A5%E9%97%A8)/%E8%AE%B2%E4%B9%89/assets/image-20200419091550859.png">
 
 
 
@@ -115,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/01/新文章/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>新文章 | Hexo</title>
   
 
 
@@ -140,8 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/01/%E6%96%B0%E6%96%87%E7%AB%A0/" itemprop="url">新文章</a></h1>
+          <h1 class="post-title" itemprop="name headline">新文章</h1>
         
 
         <div class="post-meta">
@@ -298,9 +334,7 @@
       
 
       
-        
-          
-            <p>​    《Http响应协议&amp;Servlet入门-笔记》</p>
+        <p>​    《Http响应协议&amp;Servlet入门-笔记》</p>
 <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><ol>
 <li>软件的架构有哪两种<ol>
 <li>BS：浏览器服务器模式 Browser Server</li>
@@ -1005,8 +1039,6 @@
 </tr>
 </tbody></table>
 
-          
-        
       
     </div>
     
@@ -1021,14 +1053,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%85%AD%E4%B8%80%E5%BF%AB%E4%B9%90/" rel="tag"># 六一快乐</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1038,10 +1076,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1049,6 +1088,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1069,8 +1112,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1121,6 +1173,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text">回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习目标"><span class="nav-number">2.</span> <span class="nav-text">学习目标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习内容"><span class="nav-number"></span> <span class="nav-text">学习内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#响应的三个组成部分"><span class="nav-number">1.</span> <span class="nav-text">响应的三个组成部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标"><span class="nav-number">1.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是HTTP响应"><span class="nav-number">1.2.</span> <span class="nav-text">什么是HTTP响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据准备"><span class="nav-number">1.3.</span> <span class="nav-text">数据准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应信息的三个组成"><span class="nav-number">1.4.</span> <span class="nav-text">响应信息的三个组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应行、响应头、响应体的格式"><span class="nav-number">2.</span> <span class="nav-text">响应行、响应头、响应体的格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-1"><span class="nav-number">2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应行"><span class="nav-number">2.2.</span> <span class="nav-text">响应行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应头"><span class="nav-number">2.3.</span> <span class="nav-text">响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应体"><span class="nav-number">2.4.</span> <span class="nav-text">响应体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注：idea2019一个严重bug"><span class="nav-number">2.5.</span> <span class="nav-text">注：idea2019一个严重bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结：响应的组成"><span class="nav-number">2.6.</span> <span class="nav-text">小结：响应的组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的状态码"><span class="nav-number">3.</span> <span class="nav-text">常见的状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-2"><span class="nav-number">3.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见状态码的含义"><span class="nav-number">3.2.</span> <span class="nav-text">常见状态码的含义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#200"><span class="nav-number">3.2.1.</span> <span class="nav-text">200</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#302"><span class="nav-number">3.2.2.</span> <span class="nav-text">302</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#304"><span class="nav-number">3.2.3.</span> <span class="nav-text">304</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#403"><span class="nav-number">3.2.4.</span> <span class="nav-text">403</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-number">3.2.5.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#405"><span class="nav-number">3.2.6.</span> <span class="nav-text">405</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#500"><span class="nav-number">3.2.7.</span> <span class="nav-text">500</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-1"><span class="nav-number">3.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XML配置方式：创建Servlet"><span class="nav-number">4.</span> <span class="nav-text">XML配置方式：创建Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-3"><span class="nav-number">4.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Servlet"><span class="nav-number">4.2.</span> <span class="nav-text">什么是Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet与普通的Java程序的区别"><span class="nav-number">4.2.1.</span> <span class="nav-text">Servlet与普通的Java程序的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tomcat与Servlet的关系"><span class="nav-number">4.2.2.</span> <span class="nav-text">Tomcat与Servlet的关系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写Servlet的步骤"><span class="nav-number">4.3.</span> <span class="nav-text">编写Servlet的步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">4.4.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">4.5.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-2"><span class="nav-number">4.6.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注解的方式：开发Servlet"><span class="nav-number">5.</span> <span class="nav-text">注解的方式：开发Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-4"><span class="nav-number">5.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">5.2.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体操作"><span class="nav-number">5.3.</span> <span class="nav-text">具体操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-3"><span class="nav-number">5.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet的生命周期"><span class="nav-number">6.</span> <span class="nav-text">Servlet的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-5"><span class="nav-number">6.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet接口中的方法"><span class="nav-number">6.2.</span> <span class="nav-text">Servlet接口中的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet的生命周期-1"><span class="nav-number">6.3.</span> <span class="nav-text">Servlet的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期演示案例"><span class="nav-number">6.4.</span> <span class="nav-text">生命周期演示案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤-1"><span class="nav-number">6.4.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行结果"><span class="nav-number">6.4.2.</span> <span class="nav-text">执行结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">6.4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-4"><span class="nav-number">6.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet映射多个路径"><span class="nav-number">7.</span> <span class="nav-text">Servlet映射多个路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-6"><span class="nav-number">7.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置方式"><span class="nav-number">7.2.</span> <span class="nav-text">配置方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注解方式"><span class="nav-number">7.3.</span> <span class="nav-text">注解方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-5"><span class="nav-number">7.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-pattern的通配符"><span class="nav-number">8.</span> <span class="nav-text">url-pattern的通配符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-7"><span class="nav-number">8.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">8.2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试题"><span class="nav-number">8.3.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-6"><span class="nav-number">8.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上午的回顾"><span class="nav-number">9.</span> <span class="nav-text">上午的回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应的组成"><span class="nav-number">9.1.</span> <span class="nav-text">响应的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见状态码"><span class="nav-number">9.2.</span> <span class="nav-text">常见状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#排错信息"><span class="nav-number">9.2.1.</span> <span class="nav-text">排错信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写Servlet"><span class="nav-number">9.3.</span> <span class="nav-text">编写Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XML配置方式"><span class="nav-number">9.3.1.</span> <span class="nav-text">XML配置方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注解方式-1"><span class="nav-number">9.3.2.</span> <span class="nav-text">注解方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承于GenericServlet-了解"><span class="nav-number">10.</span> <span class="nav-text">继承于GenericServlet(了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-8"><span class="nav-number">10.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet继承结构"><span class="nav-number">10.2.</span> <span class="nav-text">Servlet继承结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承GenericServlet实现Servlet"><span class="nav-number">10.3.</span> <span class="nav-text">继承GenericServlet实现Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤-2"><span class="nav-number">10.3.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果-1"><span class="nav-number">10.3.2.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">10.3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-7"><span class="nav-number">10.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HttpServlet的源码分析-了解"><span class="nav-number">11.</span> <span class="nav-text">HttpServlet的源码分析(了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-9"><span class="nav-number">11.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#405由父类HttpServlet发出"><span class="nav-number">11.2.</span> <span class="nav-text">405由父类HttpServlet发出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-2"><span class="nav-number">11.3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理图"><span class="nav-number">11.4.</span> <span class="nav-text">原理图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-8"><span class="nav-number">11.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet的执行流程"><span class="nav-number">12.</span> <span class="nav-text">Servlet的执行流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-10"><span class="nav-number">12.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tomcat的执行过程"><span class="nav-number">12.2.</span> <span class="nav-text">Tomcat的执行过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-9"><span class="nav-number">12.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#load-on-startup参数"><span class="nav-number">13.</span> <span class="nav-text">load-on-startup参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标-11"><span class="nav-number">13.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用"><span class="nav-number">13.2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number">13.3.</span> <span class="nav-text">案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求"><span class="nav-number">13.3.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-3"><span class="nav-number">13.3.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-4"><span class="nav-number">13.4.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果-2"><span class="nav-number">13.5.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-10"><span class="nav-number">13.6.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习总结"><span class="nav-number"></span> <span class="nav-text">学习总结</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1254,6 +1322,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
