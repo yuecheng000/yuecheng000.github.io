@@ -191,6 +191,335 @@
             
 
   
+    <article id="post-springBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/08/01/springBoot/" target="_blank">springBoot总结</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/08/01/springBoot/" class="archive-article-date">
+        <time datetime="2020-08-01T06:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="spring-boot总结"><a href="#spring-boot总结" class="headerlink" title="spring boot总结"></a>spring boot总结</h1><ul>
+<li><p><strong>spring boot功能</strong></p>
+<ul>
+<li>自动配置</li>
+<li>起步依赖</li>
+<li>辅助功能（嵌入式服务器，安全，指标，健康检测，外部配置等）</li>
+</ul>
+<h2 id="spring-缺点"><a href="#spring-缺点" class="headerlink" title="spring 缺点"></a><strong>spring 缺点</strong></h2><ul>
+<li>配置繁琐</li>
+<li>依赖繁琐</li>
+</ul>
+</li>
+<li><p>spring boot 与spring 关系</p>
+</li>
+</ul>
+<ol>
+<li><strong>Spring Boot 并不是对 Spring 功能上的增强，而是提供了一种快速使用 Spring 的方式。</strong></li>
+<li><strong>spring boot原则上是spring</strong></li>
+</ol>
+<h2 id="1-spring-boot-入门案例"><a href="#1-spring-boot-入门案例" class="headerlink" title="1. spring boot 入门案例"></a>1. spring boot 入门案例</h2><p><strong>案例：需求</strong></p>
+<p>搭建SpringBoot工程，定义HelloController.hello()方法，返回”Hello SpringBoot!”。</p>
+<p><strong>案例：实现步骤</strong></p>
+<p>① 创建Maven项目</p>
+<p>② 导入SpringBoot起步依赖</p>
+<ul>
+<li><strong>springboot打包方式为jar包</strong></li>
+</ul>
+<p>③ 定义Controller</p>
+<p>④ 编写引导类</p>
+<ul>
+<li><p>spring boot项目的入口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@springBootApplication</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>@springBootApplication</strong>是springboot的核心注解，具有包扫描功能。和spring配置的包扫描功能一样。需要扫描哪个包就定义在哪个包或者其父包中。</li>
+</ul>
+</li>
+</ul>
+<p>⑤ 启动测试</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><ol>
+<li><p>在spring-boot-starter-parent中定义了各种技术的版本信息，组合了一套最优搭配的技术版本。</p>
+</li>
+<li><p>在各种starter中，定义了完成该功能需要的坐标合集，其中大部分版本信息来自于父工程。</p>
+</li>
+<li><p>我们的工程继承parent，引入starter后，通过依赖传递，就可以简单方便获得需要的jar包，并且不会存在</p>
+<p>版本冲突等问题。</p>
+</li>
+</ol>
+<h2 id="2-spring-boot起步依赖原理分析"><a href="#2-spring-boot起步依赖原理分析" class="headerlink" title="2. spring boot起步依赖原理分析"></a>2. spring boot起步依赖原理分析</h2><ul>
+<li><p>在spring-boot-starter-parent中定义了各种技术的版本信息，组合了一套最优搭配的技术版本。 </p>
+</li>
+<li><p>在各种starter中，定义了完成该功能需要的坐标合集，其中大部分版本信息来自于父工程。</p>
+</li>
+<li><p>我们的工程继承parent，引入starter后，通过依赖传递，就可以简单方便获得需要的jar包，并且不会存在</p>
+<p>版本冲突等问题。</p>
+</li>
+</ul>
+<h2 id="3-springBoot配置"><a href="#3-springBoot配置" class="headerlink" title="3. springBoot配置"></a>3. springBoot配置</h2><p><strong>配置文件分类</strong></p>
+<ul>
+<li>properties:</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port=8080</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>yml:</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>yaml:</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>优先级：properties &gt; yml &gt; yaml</strong></p>
+<h2 id="4-yaml-基本语法"><a href="#4-yaml-基本语法" class="headerlink" title="4. yaml:基本语法"></a>4. yaml:基本语法</h2><ul>
+<li>大小写敏感</li>
+<li>数据值前必须有空格，作为分隔符</li>
+<li>使用缩进表示层级关系</li>
+<li>缩进时不允许使用Tab键，只允许使用空格</li>
+<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
+<li>只要相同层级的元素左侧对齐即可</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">address:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">name:</span> <span class="string">abc</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-yaml数据格式"><a href="#5-yaml数据格式" class="headerlink" title="5. yaml数据格式"></a>5. yaml数据格式</h2><ul>
+<li><p>对象（map）: 键值对的集合</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">zhuangsan</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 行内写法</span></span><br><span class="line"><span class="attr">person:</span> <span class="string">&#123;name:</span> <span class="string">zhuangsan&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组： 一组按次序排列的值</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">address:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">beijing</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">shanghai</span></span><br><span class="line"><span class="comment"># 行内写法</span></span><br><span class="line"><span class="attr">address:</span> <span class="string">[beijing,shanghai]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>纯量：单个的，不可再分的值</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">msg1:</span> <span class="string">'hello \n world'</span>   <span class="comment"># 单引忽略转义字符</span></span><br><span class="line"><span class="attr">msg2:</span> <span class="string">"hello \n world"</span>   <span class="comment"># 双引识别转义字符</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="6-yaml-参数引用"><a href="#6-yaml-参数引用" class="headerlink" title="6. yaml:参数引用"></a>6. yaml:参数引用</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">zhangsan</span></span><br><span class="line"></span><br><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">$&#123;name&#125;</span> <span class="comment"># 引用上面定义的name值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-读取配置文件内容"><a href="#7-读取配置文件内容" class="headerlink" title="7. 读取配置文件内容"></a>7. 读取配置文件内容</h2><ol>
+<li>@Value</li>
+<li>Environment</li>
+<li>@ConfigurationProperties</li>
+</ol>
+<p>yaml文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">abc</span></span><br><span class="line"></span><br><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">zhangsan</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="attr">address:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">beijing</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">shanghai</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>使用springBoot注解@Value注入上面的name值</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value</span>(<span class="string">"$&#123;name&#125;"</span>)</span><br><span class="line">prvate String name;		<span class="comment">// name = abc</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Value</span>(<span class="string">"$&#123;person.name&#125;"</span>)</span><br><span class="line"><span class="keyword">private</span> String name2;	<span class="comment">// name = zhangsan</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Value</span>(<span class="string">"$&#123;person.age&#125;"</span>)</span><br><span class="line"><span class="keyword">private</span> Integer age;	<span class="comment">//age = 12</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用Environment 对象获取数据</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> Environment env;</span><br><span class="line"></span><br><span class="line">env.ev.getProperty(<span class="string">"person.name"</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用@ConfigurationProperties注解获取数据</li>
+</ol>
+<h2 id="8-profile-配置方式"><a href="#8-profile-配置方式" class="headerlink" title="8. profile 配置方式"></a>8. profile 配置方式</h2><p>我们在开发Spring Boot应用时，通常同一套程序会被安装到不同环境，比如：开发、测试、生产等。其中数据库地址、服务</p>
+<p>器端口等等配置都不同，如果每次打包时，都要修改配置文件，那么非常麻烦。profile功能就是来进行动态配置切换的。</p>
+<ol>
+<li><p>profile配置方式</p>
+<ul>
+<li><p>多profile文件方式：提供多个配置文件，每个代表一种环境。</p>
+<ul>
+<li>application-dev.properties/yml 开发环境</li>
+<li>application-test.properties/yml 测试环境</li>
+<li>application-pro.properties/yml 生产环境</li>
+</ul>
+</li>
+<li><p>yml多文档方式</p>
+<ul>
+<li>在yml中使用 — 分隔不同配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>profile激活方式</p>
+<ul>
+<li><p>配置文件： 再配置文件中配置：spring.profiles.active=dev</p>
+</li>
+<li><p>虚拟机参数：在VM options 指定：-Dspring.profiles.active=dev</p>
+</li>
+<li><p>命令行参数：java –jar xxx.jar –spring.profiles.active=dev</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>使用主配置文件的spring.profiles.active属性激活dev配置文件</strong></p>
+<p><strong>application.yml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>application-dev.yml</em></strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">81</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>application-por.yml</em></strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">88</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-springBoot配置-项目内部文件加载顺序"><a href="#9-springBoot配置-项目内部文件加载顺序" class="headerlink" title="9. springBoot配置-项目内部文件加载顺序"></a>9. springBoot配置-项目内部文件加载顺序</h2><p>Springboot程序启动时，会从以下位置加载配置文件：</p>
+<ol>
+<li><p>file:./config/：当前项目下的/config目录下</p>
+</li>
+<li><p>file:./ ：当前项目的根目录</p>
+</li>
+<li><p>classpath:/config/：classpath的/config目录</p>
+</li>
+<li><p>classpath:/ ：classpath的根目录</p>
+</li>
+</ol>
+<p><strong>加载顺序为上文的排列顺序，高优先级配置的属性会生效</strong></p>
+<h2 id="10-springBoot配置-项目外部文件加载顺序"><a href="#10-springBoot配置-项目外部文件加载顺序" class="headerlink" title="10. springBoot配置-项目外部文件加载顺序"></a>10. springBoot配置-项目外部文件加载顺序</h2><p>通过官网查看外部属性加载顺序：</p>
+<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html</a></p>
+<h2 id="11-springBoot整合junit"><a href="#11-springBoot整合junit" class="headerlink" title="11. springBoot整合junit"></a>11. springBoot整合junit</h2><p>实现步骤：</p>
+<ol>
+<li>搭建SpringBoot工程</li>
+<li>引入starter-test起步依赖</li>
+<li>编写测试类</li>
+<li>添加测试相关注解<ul>
+<li>@RunWith(SpringRunner.class)</li>
+<li>@SpringBootTest(classes = 启动类.class)</li>
+</ul>
+</li>
+<li>编写测试方法</li>
+</ol>
+<p><strong>示例</strong></p>
+<p><em>测试类UserService.java</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-07-31-15:23</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"add"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>测试方法 UserServiceTest.java</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-07-31-15:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">/*如果测试方法所在的类的包路径和启动类同级或者是启动类的子包</span></span><br><span class="line"><span class="class">则可以省略<span class="title">classes</span>属性*/</span></span><br><span class="line"><span class="class">@<span class="title">SpringBootTest</span>(<span class="title">classes</span> </span>= SpringbootConfigApplication<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">UserServiceTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        userService.add();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-SpringBoot整合MyBatis"><a href="#12-SpringBoot整合MyBatis" class="headerlink" title="12. SpringBoot整合MyBatis"></a>12. SpringBoot整合MyBatis</h2><ol>
+<li>搭建SpringBoot工程</li>
+<li>引入mybatis依赖，添加mysql驱动</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mybatis依赖--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--mysql驱动--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>编写DataSource和MyBatis相关配置</li>
+</ol>
+<p><strong>application.yml配置文件</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置数据源</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://47.93.182.151:3306/springboot?characterEncoding=UTF-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">liping</span></span><br><span class="line"></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">type-aliases-package:</span> <span class="string">com.itheima.springbootmybatis.domin</span> <span class="comment"># 扫描包名，为实体类定义别名</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:mapper/*Mapper.xml</span>            <span class="comment"># mapper映射文件路径</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>定义表和实体类</p>
+</li>
+<li><p>编写dao接口和Mapper映射文件/纯注解开发</p>
+</li>
+</ol>
+<p><strong>UserMapper映射文件</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="meta-string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.itheima.springbootmybatis.userservice.UserMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"xmlFindAll"</span> <span class="attr">resultType</span>=<span class="string">"com.itheima.springbootmybatis.domin.User"</span>&gt;</span></span><br><span class="line">        select * from user</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>dao接口</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.springbootmybatis.userservice;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.itheima.springbootmybatis.domin.User;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Select;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-07-31-20:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Select</span>(<span class="string">"select * from user"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;User&gt; <span class="title">findAll</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;User&gt; <span class="title">xmlFindAll</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-SpringBoot整合Redis"><a href="#13-SpringBoot整合Redis" class="headerlink" title="13. SpringBoot整合Redis"></a>13. SpringBoot整合Redis</h2><ol>
+<li><p>创建SpringBoot工程</p>
+</li>
+<li><p>引入redis起步依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置redis相关属性</p>
+<p><strong><em>application.yml</em></strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># redis相关配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">47.93</span><span class="number">.182</span><span class="number">.151</span>   <span class="comment"># 主机名</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">360732</span>      <span class="comment"># 密码</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注入RedisTemplate</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-07-31-21:13</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">SpringBootTest</span>(<span class="title">classes</span> </span>= SpringBootRedisApplication<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">RedisTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">//注入RedisTemplate模板类</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        redisTemplate.boundValueOps(<span class="string">"name"</span>).set(<span class="string">"小李"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Object name = redisTemplate.boundValueOps(<span class="string">"name"</span>).get();</span><br><span class="line">        System.out.println(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/08/01/springBoot/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-jdbc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -423,6 +752,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
             
             <div class="clearfix"></div>
