@@ -6,16 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/8 | 叶青</title>
+  <title>SpringBoot高级 | 叶青</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="叶青">
-<meta property="og:url" content="http://yoursite.com/archives/2020/08/index.html">
+  <meta name="description" content="SpringBoot高级 SpringBoot 自动配置 SpringBoot 监听机制 SpringBoot 启动流程分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot高级">
+<meta property="og:url" content="http://yoursite.com/2020/08/03/SpringBoot-0/index.html">
 <meta property="og:site_name" content="叶青">
+<meta property="og:description" content="SpringBoot高级 SpringBoot 自动配置 SpringBoot 监听机制 SpringBoot 启动流程分析">
+<meta property="og:image" content="http://yoursite.com/Desktop/%E9%9A%8F%E7%AC%94/%E5%BE%AE%E6%9C%8D%E5%8A%A1springboot/spring%20boot%E9%AB%98%E7%BA%A7.assets/image-20200803193614348.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200149446.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200216313.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200231591.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200251709.png">
+<meta property="article:published_time" content="2020-08-03T12:11:20.000Z">
+<meta property="article:modified_time" content="2020-08-03T12:13:57.775Z">
 <meta property="article:author" content="叶青">
+<meta property="article:tag" content="技术笔记">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="归档">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/Desktop/%E9%9A%8F%E7%AC%94/%E5%BE%AE%E6%9C%8D%E5%8A%A1springboot/spring%20boot%E9%AB%98%E7%BA%A7.assets/image-20200803193614348.png">
   
     <link rel="alternative" href="/atom.xml" title="叶青" type="application/atom+xml">
   
@@ -184,41 +198,217 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringBoot-0" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/03/SpringBoot-0/" class="archive-article-date">
-        <time datetime="2020-08-03T12:11:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/03/SpringBoot-0/" target="_blank">SpringBoot高级</a>
   
+    <h1 class="article-title" itemprop="name">
+      SpringBoot高级
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/08/03/SpringBoot-0/" class="archive-article-date">
+        <time datetime="2020-08-03T12:11:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="SpringBoot高级"><a href="#SpringBoot高级" class="headerlink" title="SpringBoot高级"></a>SpringBoot高级</h1><ul>
+<li>SpringBoot 自动配置</li>
+<li>SpringBoot 监听机制</li>
+<li>SpringBoot 启动流程分析</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="SpringBoot-自动配置"><a href="#SpringBoot-自动配置" class="headerlink" title="SpringBoot 自动配置"></a>SpringBoot 自动配置</h2><p><strong>Condition</strong></p>
+<p>Condition 是在Spring 4.0 增加的条件判断功能，通过这个可以功能可以实现选择性的创建 Bean 操作。</p>
+<p><strong>问题：</strong></p>
+<ul>
+<li>SpringBoot是如何知道要创建哪个Bean的？比如SpringBoot是如</li>
+</ul>
+<p>何知道要创建RedisTemplate的？</p>
+<p><font color="red"><strong>案例: 需求</strong></font></p>
+<p>​        自定义redis-starter。要求当导入redis坐标时，SpringBoot自动创建Jedis的Bean</p>
+<p><font color="red"><strong>案例: 实现步骤</strong></font></p>
+<ol>
+<li><p>创建 redis-spring-boot-autoconfigure 模块</p>
+</li>
+<li><p>在 redis-spring-boot-autoconfigure 模块中初始化 Jedis 的Bean。并定义META-INF/spring.factories 文件</p>
+<img src="/.com//../../Desktop/随笔/微服务springboot/spring boot高级.assets/image-20200803193614348.png" alt="image-20200803193614348" style="zoom:50%;">
+
+
+
+</li>
+</ol>
+<p>   <strong>pom.xml</strong></p>
+   <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>redis-spring-boot-autoconfigure<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span> 2.1.8.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>   <strong>MyRedisAutoConfigure.java</strong></p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.redis.config;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.condition.ConditionalOnClass;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.context.properties.EnableConfigurationProperties;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-08-03-8:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(MyRedisProperties<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnClass</span>(<span class="title">Jedis</span>.<span class="title">class</span>)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">MyRedisAutoConfigure</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean</span>(name = <span class="string">"jedis"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Jedis <span class="title">jedis</span><span class="params">(MyRedisProperties myRedisProperties)</span></span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(myRedisProperties.getHost(), myRedisProperties.getPort());</span><br><span class="line">        jedis.auth(myRedisProperties.getPassword());</span><br><span class="line">        <span class="keyword">return</span> jedis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>   <strong>MyRedisProperties.java</strong></p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.redis.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.context.properties.ConfigurationProperties;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-08-03-8:36</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"redis"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyRedisProperties</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String host = <span class="string">"localhost"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> port = <span class="number">6379</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPassword</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPassword</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.password = password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getHost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> host;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHost</span><span class="params">(String host)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.host = host;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPort</span><span class="params">(<span class="keyword">int</span> port)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.port = port;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>   <strong>spring.factories</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.boot.autoconfigure.EnableAutoConfiguration=\</span><br><span class="line">  com.itheima.redis.config.MyRedisAutoConfigure</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong><em>创建 redis-spring-boot-starter 模块,依赖 redis-spring-boot-autoconfigure的模块</em></strong></li>
+</ol>
+<p><strong>pom.xml</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>redis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span> 2.1.8.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>redis-spring-boot-autoconfigure<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p><strong><em>在测试模块中引入自定义的 redis-starter 依赖，测试获取Jedis 的Bean，操作 redis。</em></strong></p>
+<p>application.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">88</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义redis配置属性</span></span><br><span class="line"><span class="attr">redis:</span></span><br><span class="line">  <span class="attr">host:</span> <span class="number">47.93</span><span class="number">.182</span><span class="number">.151</span></span><br><span class="line">  <span class="attr">password:</span> <span class="number">360732</span></span><br></pre></td></tr></table></figure>
+
+<p>SpringbootConfigApplication.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ConfigurableApplicationContext;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> XYL</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-07-31-11:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringbootConfigApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ConfigurableApplicationContext context = SpringApplication.run(SpringbootConfigApplication<span class="class">.<span class="keyword">class</span>, <span class="title">args</span>)</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//测试自定义jedis依赖</span></span><br><span class="line">        Jedis jedis = context.getBean(Jedis<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">        String set = jedis.set(<span class="string">"name"</span>, <span class="string">"丽丽"</span>);</span><br><span class="line">        System.out.println(set);</span><br><span class="line"></span><br><span class="line">        String name = jedis.get(<span class="string">"name"</span>);</span><br><span class="line">        System.out.println(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ol>
+<h2 id="Import-的-4种用法"><a href="#Import-的-4种用法" class="headerlink" title="Import 的 4种用法"></a>Import 的 4种用法</h2><ol>
+<li>导入Bean</li>
+<li>导入配置类</li>
+<li>导入ImportSelector实现类。一般用于加载配置文件中的类</li>
+<li>导入ImportBeanDefinitionRegistrar实现类</li>
+</ol>
+<p><strong><em>import作用：</em></strong>导入后，可以从容器注入bean</p>
+<h2 id="SpringBoot-监听机制"><a href="#SpringBoot-监听机制" class="headerlink" title="SpringBoot 监听机制"></a>SpringBoot 监听机制</h2><p>SpringBoot 的监听机制，其实是对Java提供的事件监听机制的封装。</p>
+<p>Java中的事件监听机制定义了以下几个角色：</p>
+<p>① 事件：Event，继承 java.util.EventObject 类的对象</p>
+<p>② 事件源：Source ，任意对象Object</p>
+<p>③ 监听器：Listener，实现 java.util.EventListener 接口 的对象</p>
+<p><strong>SpringBoot 监听机制</strong></p>
+<p>SpringBoot 在项目启动时，会对几个监听器进行回调，我们可以实现这些监听器接口，在项目启动时完成</p>
+<p>一些操作。</p>
+<p>ApplicationContextInitializer、SpringApplicationRunListener、CommandLineRunner、ApplicationRunner</p>
+<h2 id="微服务启动总体两步"><a href="#微服务启动总体两步" class="headerlink" title="微服务启动总体两步"></a>微服务启动总体两步</h2><ol>
+<li><p><strong>run()方法初始化</strong></p>
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200149446.png" style="zoom:50%;">
+
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200216313.png" style="zoom:50%;">
+
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200231591.png" style="zoom:50%;">
+
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803200251709.png">
+
+<p><font color="red"><strong>最终从此方法加载META-INF/spring.factories文件进行自动装配bean对象</strong></font></p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> List&lt;String&gt; <span class="title">getCandidateConfigurations</span><span class="params">(AnnotationMetadata metadata, AnnotationAttributes attributes)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(<span class="keyword">this</span>.getSpringFactoriesLoaderFactoryClass(), <span class="keyword">this</span>.getBeanClassLoader());</span><br><span class="line">       Assert.notEmpty(configurations, <span class="string">"No auto configuration classes found in META-INF/spring.factories. If you are using a custom packaging, make sure that file is correct."</span>);</span><br><span class="line">       <span class="keyword">return</span> configurations;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>执行</strong></li>
+</ol>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          叶青
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2020/08/03/SpringBoot-0/" title="SpringBoot高级" target="_blank">http://yoursite.com/2020/08/03/SpringBoot-0/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -242,70 +432,120 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/03/SpringBoot-0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/01/springBoot/" class="archive-article-date">
-        <time datetime="2020-08-01T06:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/01/springBoot/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springBoot总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/01/springBoot/" target="_blank">springBoot总结</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot高级"><span class="toc-number">1.</span> <span class="toc-text">SpringBoot高级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot-自动配置"><span class="toc-number">1.1.</span> <span class="toc-text">SpringBoot 自动配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Import-的-4种用法"><span class="toc-number">1.2.</span> <span class="toc-text">Import 的 4种用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot-监听机制"><span class="toc-number">1.3.</span> <span class="toc-text">SpringBoot 监听机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微服务启动总体两步"><span class="toc-number">1.4.</span> <span class="toc-text">微服务启动总体两步</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -346,8 +586,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
