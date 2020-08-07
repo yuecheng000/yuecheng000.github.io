@@ -6,18 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>categories | 叶青</title>
+  <title>RabbitMQ安装文档 | 叶青</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="RabbitMQ安装文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RabbitMQ安装文档">
+<meta property="og:url" content="http://yoursite.com/2020/08/07/RabbitMQ%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/index.html">
 <meta property="og:site_name" content="叶青">
-<meta property="article:published_time" content="2020-06-01T06:32:04.000Z">
-<meta property="article:modified_time" content="2020-06-01T08:41:46.558Z">
+<meta property="og:description" content="RabbitMQ安装文档">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565526174751.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565526264426.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565528746057.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098043833.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098315375.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098496482.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098585317.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098719054.png">
+<meta property="article:published_time" content="2020-08-07T12:25:54.000Z">
+<meta property="article:modified_time" content="2020-08-07T12:27:38.025Z">
 <meta property="article:author" content="叶青">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="RabbitMQ安装">
+<meta property="article:tag" content="RabbitMQ">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565526174751.png">
   
     <link rel="alternative" href="/atom.xml" title="叶青" type="application/atom+xml">
   
@@ -186,14 +201,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-RabbitMQ安装文档" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      categories
+      RabbitMQ安装文档
     </h1>
   
 
@@ -205,8 +220,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/categories/index.html" class="archive-article-date">
-        <time datetime="2020-06-01T06:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-01</time>
+<a href="/2020/08/07/RabbitMQ%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/" class="archive-article-date">
+        <time datetime="2020-08-07T12:25:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
 </a>
 
   
@@ -219,7 +234,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">935字</span>
     </span>
   </span>
 
@@ -228,7 +243,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -239,7 +254,86 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h1 id="RabbitMQ安装文档"><a href="#RabbitMQ安装文档" class="headerlink" title="RabbitMQ安装文档"></a>RabbitMQ安装文档</h1><a id="more"></a>
+
+<h2 id="1-安装依赖环境"><a href="#1-安装依赖环境" class="headerlink" title="1. 安装依赖环境"></a>1. 安装依赖环境</h2><p>在线安装依赖环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make gcc gcc-c++ kernel-devel m4 ncurses-devel tk tc xz</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-安装Erlang"><a href="#2-安装Erlang" class="headerlink" title="2. 安装Erlang"></a>2. 安装Erlang</h2><p>上传</p>
+<p>erlang-18.3-1.el7.centos.x86_64.rpm<br>socat-1.7.3.2-5.el7.lux.x86_64.rpm<br>rabbitmq-server-3.6.5-1.noarch.rpm</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">rpm -ivh erlang-18.3-1.el7.centos.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<p>如果出现如下错误</p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565526174751.png" alt="1565526174751"></p>
+<p>说明gblic 版本太低。我们可以查看当前机器的gblic 版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /lib64/libc.so.6 | grep GLIBC</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565526264426.png" alt="1565526264426"></p>
+<p>当前最高版本2.12，需要2.15.所以需要升级glibc</p>
+<ul>
+<li><p>使用yum更新安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载rpm包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-utils-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-static-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-common-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-devel-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-headers-2.17-55.el6.x86_64.rpm &amp;</span><br><span class="line">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/nscd-2.17-55.el6.x86_64.rpm &amp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装rpm包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -Uvh *-2.17-55.el6.x86_64.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完毕后再查看glibc版本,发现glibc版本已经到2.17了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /lib64/libc.so.6 | grep GLIBC</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ul>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565528746057.png" alt="1565528746057"></p>
+<h2 id="3-安装RabbitMQ"><a href="#3-安装RabbitMQ" class="headerlink" title="3. 安装RabbitMQ"></a>3. 安装RabbitMQ</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">rpm -ivh socat-1.7.3.2-5.el7.lux.x86_64.rpm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">rpm -ivh rabbitmq-server-3.6.5-1.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="4-开启管理界面及配置"><a href="#4-开启管理界面及配置" class="headerlink" title="4. 开启管理界面及配置"></a>4. 开启管理界面及配置</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启管理界面</span></span><br><span class="line">rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_management</span><br><span class="line"><span class="comment"># 修改默认配置信息</span></span><br><span class="line">vim /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/ebin/rabbit.app </span><br><span class="line"><span class="comment"># 比如修改密码、配置等等，例如：loopback_users 中的 &lt;&lt;"guest"&gt;&gt;,只保留guest</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="5-启动"><a href="#5-启动" class="headerlink" title="5. 启动"></a>5. 启动</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start <span class="comment"># 启动服务</span></span><br><span class="line">service rabbitmq-server stop <span class="comment"># 停止服务</span></span><br><span class="line">service rabbitmq-server restart <span class="comment"># 重启服务</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>设置配置文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/doc/rabbitmq-server-3.6.5/</span><br><span class="line"></span><br><span class="line">cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="6-配置虚拟主机及用户"><a href="#6-配置虚拟主机及用户" class="headerlink" title="6. 配置虚拟主机及用户"></a>6. 配置虚拟主机及用户</h2><h3 id="6-1-用户角色"><a href="#6-1-用户角色" class="headerlink" title="6.1. 用户角色"></a>6.1. 用户角色</h3><p>RabbitMQ在安装好后，可以访问<code>http://ip地址:15672</code> ；其自带了guest/guest的用户名和密码；如果需要创建自定义用户；那么也可以登录管理界面后，如下操作：</p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098043833.png" alt="1565098043833"> </p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098315375.png" alt="1565098315375"></p>
+<p><strong>角色说明</strong>：</p>
+<p>1、 超级管理员(administrator)</p>
+<p>可登陆管理控制台，可查看所有的信息，并且可以对用户，策略(policy)进行操作。</p>
+<p>2、 监控者(monitoring)</p>
+<p>可登陆管理控制台，同时可以查看rabbitmq节点的相关信息(进程数，内存使用情况，磁盘使用情况等)</p>
+<p>3、 策略制定者(policymaker)</p>
+<p>可登陆管理控制台, 同时可以对policy进行管理。但无法查看节点的相关信息(上图红框标识的部分)。</p>
+<p>4、 普通管理者(management)</p>
+<p>仅可登陆管理控制台，无法看到节点信息，也无法对策略进行管理。</p>
+<p>5、 其他</p>
+<p>无法登陆管理控制台，通常就是普通的生产者和消费者。</p>
+<h3 id="6-2-Virtual-Hosts配置"><a href="#6-2-Virtual-Hosts配置" class="headerlink" title="6.2. Virtual Hosts配置"></a>6.2. Virtual Hosts配置</h3><p>像mysql拥有数据库的概念并且可以指定用户对库和表等操作的权限。RabbitMQ也有类似的权限管理；在RabbitMQ中可以虚拟消息服务器Virtual Host，每个Virtual Hosts相当于一个相对独立的RabbitMQ服务器，每个VirtualHost之间是相互隔离的。exchange、queue、message不能互通。 相当于mysql的db。Virtual Name一般以/开头。</p>
+<h4 id="6-2-1-创建Virtual-Hosts"><a href="#6-2-1-创建Virtual-Hosts" class="headerlink" title="6.2.1. 创建Virtual Hosts"></a>6.2.1. 创建Virtual Hosts</h4><p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098496482.png" alt="1565098496482"></p>
+<h4 id="6-2-2-设置Virtual-Hosts权限"><a href="#6-2-2-设置Virtual-Hosts权限" class="headerlink" title="6.2.2. 设置Virtual Hosts权限"></a>6.2.2. 设置Virtual Hosts权限</h4><p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098585317.png" alt="1565098585317"></p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/MQ%E5%AE%89%E8%A3%85/1565098719054.png" alt="1565098719054"></p>
+
     
 
     
@@ -285,7 +379,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/categories/index.html" title="categories" target="_blank">http://yoursite.com/categories/index.html</a>
+          <a href="http://yoursite.com/2020/08/07/RabbitMQ安装文档/" title="RabbitMQ安装文档" target="_blank">http://yoursite.com/2020/08/07/RabbitMQ安装文档/</a>
         </li>
         
         <li>
@@ -302,6 +396,29 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">RabbitMQ安装</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">RabbitMQ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -352,7 +469,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/07/RabbitMQ%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -364,6 +481,16 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/03/SpringBoot-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot高级</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -386,7 +513,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RabbitMQ安装文档"><span class="toc-number">1.</span> <span class="toc-text">RabbitMQ安装文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装依赖环境"><span class="toc-number">1.1.</span> <span class="toc-text">1. 安装依赖环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装Erlang"><span class="toc-number">1.2.</span> <span class="toc-text">2. 安装Erlang</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装RabbitMQ"><span class="toc-number">1.3.</span> <span class="toc-text">3. 安装RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-开启管理界面及配置"><span class="toc-number">1.4.</span> <span class="toc-text">4. 开启管理界面及配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-启动"><span class="toc-number">1.5.</span> <span class="toc-text">5. 启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-配置虚拟主机及用户"><span class="toc-number">1.6.</span> <span class="toc-text">6. 配置虚拟主机及用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-用户角色"><span class="toc-number">1.6.1.</span> <span class="toc-text">6.1. 用户角色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-Virtual-Hosts配置"><span class="toc-number">1.6.2.</span> <span class="toc-text">6.2. Virtual Hosts配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-创建Virtual-Hosts"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">6.2.1. 创建Virtual Hosts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-2-设置Virtual-Hosts权限"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">6.2.2. 设置Virtual Hosts权限</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -394,6 +521,16 @@
         
     </div>
 </aside>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -436,7 +573,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
