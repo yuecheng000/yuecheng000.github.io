@@ -6,16 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: RabbitMQ | 叶青</title>
+  <title>Zookeeperz安装 | 叶青</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="叶青">
-<meta property="og:url" content="http://yoursite.com/tags/RabbitMQ/index.html">
+  <meta name="description" content="1.1 下载安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zookeeperz安装">
+<meta property="og:url" content="http://yoursite.com/2020/08/07/Zookeeperz%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="叶青">
+<meta property="og:description" content="1.1 下载安装">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548250377.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548052037.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548175232.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548112773.png">
+<meta property="article:published_time" content="2020-08-07T12:51:21.000Z">
+<meta property="article:modified_time" content="2020-08-07T12:52:56.632Z">
 <meta property="article:author" content="叶青">
+<meta property="article:tag" content="技术笔记">
+<meta property="article:tag" content="归档">
+<meta property="article:tag" content="Dubbo">
+<meta property="article:tag" content="Zookeeper">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548250377.png">
   
     <link rel="alternative" href="/atom.xml" title="叶青" type="application/atom+xml">
   
@@ -184,77 +198,307 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Zookeeperz安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/07/RabbitMQ%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/" class="archive-article-date">
-        <time datetime="2020-08-07T12:25:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/08/07/RabbitMQ%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/" target="_blank">RabbitMQ安装文档</a>
   
+    <h1 class="article-title" itemprop="name">
+      Zookeeperz安装
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/08/07/Zookeeperz%E5%AE%89%E8%A3%85/" class="archive-article-date">
+        <time datetime="2020-08-07T12:51:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">285字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="1-1-下载安装"><a href="#1-1-下载安装" class="headerlink" title="1.1 下载安装"></a>1.1 下载安装</h2><a id="more"></a>
+
+<p><strong>1、环境准备</strong></p>
+<p>ZooKeeper服务器是用Java创建的，它运行在JVM之上。需要安装JDK 7或更高版本。</p>
+<p><strong>2、上传</strong></p>
+<p>将下载的ZooKeeper放到/opt/ZooKeeper目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">上传zookeeper alt+p</span></span><br><span class="line">put f:/setup/apache-zookeeper-3.5.6-bin.tar.gz</span><br><span class="line"><span class="meta">#</span><span class="bash">打开 opt目录</span></span><br><span class="line">cd /opt</span><br><span class="line"><span class="meta">#</span><span class="bash">创建zooKeeper目录</span></span><br><span class="line">mkdir  zooKeeper</span><br><span class="line"><span class="meta">#</span><span class="bash">将zookeeper安装包移动到 /opt/zooKeeper</span></span><br><span class="line">mv apache-zookeeper-3.5.6-bin.tar.gz /opt/zookeeper/</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、解压</strong></p>
+<p>将tar包解压到/opt/zookeeper目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-ZooKeeper-3.5.6-bin.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-配置启动"><a href="#1-2-配置启动" class="headerlink" title="1.2 配置启动"></a>1.2 配置启动</h2><p><strong>1、配置zoo.cfg</strong></p>
+<p>进入到conf目录拷贝一个zoo_sample.cfg并完成配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">进入到conf目录</span></span><br><span class="line">cd /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/conf/</span><br><span class="line"><span class="meta">#</span><span class="bash">拷贝</span></span><br><span class="line">cp  zoo_sample.cfg  zoo.cfg</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改zoo.cfg</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">打开目录</span></span><br><span class="line">cd /opt/zooKeeper/</span><br><span class="line"><span class="meta">#</span><span class="bash">创建zooKeeper存储目录</span></span><br><span class="line">mkdir  zkdata</span><br><span class="line"><span class="meta">#</span><span class="bash">修改zoo.cfg</span></span><br><span class="line">vim /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548250377.png" alt="1577548250377"></p>
+<p>修改存储目录：dataDir=/opt/zookeeper/zkdata</p>
+<p><strong>2、启动ZooKeeper</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/bin/</span><br><span class="line"><span class="meta">#</span><span class="bash">启动</span></span><br><span class="line"> ./zkServer.sh  start</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548052037.png" alt="1577548052037"></p>
+<p>看到上图表示ZooKeeper成功启动</p>
+<p><strong>3、查看ZooKeeper状态</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
+
+<p>zookeeper启动成功。standalone代表zk没有搭建集群，现在是单节点</p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548175232.png" alt="1577548175232"></p>
+<p>zookeeper没有启动</p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/dubbo-ZooKeeper/1577548112773.png" alt="1577548112773"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          叶青
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2020/08/07/Zookeeperz安装/" title="Zookeeperz安装" target="_blank">http://yoursite.com/2020/08/07/Zookeeperz安装/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">归档</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">RabbitMQ安装</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Dubbo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">RabbitMQ</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Zookeeper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/07/Zookeeperz%E5%AE%89%E8%A3%85/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2020/08/07/Zookeeper%E6%90%AD%E5%BB%BA%E9%9B%86%E7%BE%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Zookeeper搭建集群
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/07/Duoob%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Duoob使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-下载安装"><span class="toc-number">1.</span> <span class="toc-text">1.1 下载安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-配置启动"><span class="toc-number">2.</span> <span class="toc-text">1.2 配置启动</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -295,9 +539,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
