@@ -6,18 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>标签 | 叶青</title>
+  <title>SpringCloud微服务概念 | 叶青</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="微服务架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringCloud微服务概念">
+<meta property="og:url" content="http://yoursite.com/2020/08/09/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="叶青">
-<meta property="article:published_time" content="2020-06-01T06:20:56.000Z">
-<meta property="article:modified_time" content="2020-06-01T06:56:45.376Z">
+<meta property="og:description" content="微服务架构">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803091602604.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803092419726.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803092749572.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803094545808.png">
+<meta property="og:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803095159098.png">
+<meta property="article:published_time" content="2020-08-09T06:17:30.000Z">
+<meta property="article:modified_time" content="2020-08-09T06:19:23.577Z">
 <meta property="article:author" content="叶青">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="技术笔记">
+<meta property="article:tag" content="归档">
+<meta property="article:tag" content="微服务">
+<meta property="article:tag" content="SpringCloud">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803091602604.png">
   
     <link rel="alternative" href="/atom.xml" title="叶青" type="application/atom+xml">
   
@@ -186,14 +200,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-SpringCloud微服务概念" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      标签
+      SpringCloud微服务概念
     </h1>
   
 
@@ -205,8 +219,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/tags/index.html" class="archive-article-date">
-        <time datetime="2020-06-01T06:20:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-01</time>
+<a href="/2020/08/09/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E5%BF%B5/" class="archive-article-date">
+        <time datetime="2020-08-09T06:17:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
 </a>
 
   
@@ -219,7 +233,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">878字</span>
     </span>
   </span>
 
@@ -228,7 +242,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -239,7 +253,78 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h1 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h1><a id="more"></a>
+
+<p>​    简介：</p>
+<ul>
+<li>“微服务”一词源于 Martin Fowler的名为 Microservices的博文,可以在他的官方博客上找到</li>
+<li><a href="http://martinfowler.com/articles/microservices.html" target="_blank" rel="noopener">http://martinfowler.com/articles/microservices.html</a></li>
+<li>微服务是系统架构上的一种设计风格,它的主旨是将一个原本独立的系统拆分成多个小型服务,这些小型服务都各自独立的进程中运行,服务之间一般通过 HTTP 的 RESTfuL API 进行通信协作。</li>
+<li>被拆分成的每一个小型服务都围绕着系统中的某一项或些耦合度较高的业务功能进行构建,并且每个服务都维护着白身的数据存储、业务开发自动化测试案例以及独立部署机制。</li>
+<li>由于有了轻量级的通信协作基础,所以这些微服务可以使用不同的语言来编写。</li>
+</ul>
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803091602604.png" alt="image-20200803091602604" style="zoom: 50%;">
+
+<h2 id="1-走进Spring-Cloud"><a href="#1-走进Spring-Cloud" class="headerlink" title="1. 走进Spring Cloud"></a><strong>1. 走进Spring Cloud</strong></h2><ul>
+<li><p><font color="red"><strong>Spring Cloud 是一系列框架的有序集合。</strong></font></p>
+</li>
+<li><p>Spring Cloud 并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来。</p>
+</li>
+<li><p>通过 Spring Boot 风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。</p>
+</li>
+<li><p>它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置心、消息总线、负载均衡、 断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。</p>
+</li>
+<li><p>Spring Cloud项目官方网址：<a href="https://spring.io/projects/spring-cloud" target="_blank" rel="noopener">https://spring.io/projects/spring-cloud</a></p>
+</li>
+<li><p>Spring Cloud 版本命名方式采用了伦敦地铁站的名称，同时根据字母表的顺序来对应版本时间顺序，比如：最早的Release版本：Angel，第二个Release版本：Brixton，然后是Camden、DalstonEdgwareFinchley，Greenwich，Hoxton。  </p>
+</li>
+<li><p>目前最新的是Hoxton版本。</p>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803092419726.png" alt="image-20200803092419726"></p>
+</li>
+</ul>
+<h2 id="2-Spring-Cloud-与-Dubbo对比"><a href="#2-Spring-Cloud-与-Dubbo对比" class="headerlink" title="2. Spring Cloud 与 Dubbo对比"></a>2. Spring Cloud 与 Dubbo对比</h2><ul>
+<li>Spring Cloud 与 Dubbo 都是实现微服务有效的工具。</li>
+<li>Dubbo 只是实现了服务治理，而 Spring Cloud 子项目分别覆盖了微服务架构下的众多部件。</li>
+<li>Dubbo 使用 RPC 通讯协议，Spring Cloud 使用 RESTful 完成通信，Dubbo 效率略高于 Spring Cloud。</li>
+</ul>
+<img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803092749572.png" style="zoom:67%;">
+
+
+
+<p><strong>小结</strong></p>
+<ul>
+<li>微服务就是将项目的各个模块拆分为可独立运行、部署、测试的架构设计风格。</li>
+<li>Spring 公司将其他公司中微服务架构常用的组件整合起来，并使用 SpringBoot 简化其开发、配置。称为Spring Cloud</li>
+<li>Spring Cloud 与 Dubbo都是实现微服务有效的工具。Dubbo 性能更好，而 Spring Cloud 功能更全面。</li>
+</ul>
+<p>​        </p>
+<h2 id="3-服务治理"><a href="#3-服务治理" class="headerlink" title="3. 服务治理"></a>3. 服务治理</h2><pre><code>### **3.1 Eureka**</code></pre><ul>
+<li>Eureka 是 Netflix 公司开源的一个服务注册与发现的组件 。 </li>
+<li>Eureka 和其他 Netflix 公司的服务组件（例如负载均衡、熔断器、网关等） 一起，被 Spring Cloud 社区整合为Spring-Cloud-Netflix 模块。</li>
+<li>Eureka 包含两个组件：Eureka Server (注册中心) 和 Eureka Client (服务提供者、服务消费者)。</li>
+</ul>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803094545808.png" alt="image-20200803094545808"></p>
+<p><strong>Eureka搭建</strong></p>
+<ol>
+<li><p><font color="red"><strong>搭建 Provider 和 Consumer 服务。</strong></font></p>
+</li>
+<li><p>使用 RestTemplate 完成远程调用。</p>
+</li>
+<li><p>搭建 Eureka Server 服务。</p>
+</li>
+<li><p>改造 Provider 和 Consumer 称为 Eureka Client。</p>
+</li>
+<li><p>Consumer 服务 通过从 Eureka Server 中抓取 Provider 地址 完成 远程调用</p>
+</li>
+</ol>
+<p><img src="http://yuechengimg.oss-cn-hangzhou.aliyuncs.com/md/image-20200803095159098.png" alt="image-20200803095159098"></p>
+<p><strong>RestTemplate:</strong></p>
+<ul>
+<li>Spring提供的一种简单便捷的模板类，用于在 java 代码里访问 restful 服务。</li>
+<li>其功能与 HttpClient 类似，但是 RestTemplate 实现更优雅，使用更方便。</li>
+</ul>
+<p>​    </p>
+
     
 
     
@@ -285,7 +370,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/tags/index.html" title="标签" target="_blank">http://yoursite.com/tags/index.html</a>
+          <a href="http://yoursite.com/2020/08/09/SpringCloud微服务概念/" title="SpringCloud微服务概念" target="_blank">http://yoursite.com/2020/08/09/SpringCloud微服务概念/</a>
         </li>
         
         <li>
@@ -302,6 +387,37 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">归档</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SpringCloud</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -352,7 +468,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/09/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E5%BF%B5/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -364,6 +480,16 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/07/Zookeeper%E6%90%AD%E5%BB%BA%E9%9B%86%E7%BE%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Zookeeper搭建集群</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -386,7 +512,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微服务架构"><span class="toc-number">1.</span> <span class="toc-text">微服务架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-走进Spring-Cloud"><span class="toc-number">1.1.</span> <span class="toc-text">1. 走进Spring Cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Spring-Cloud-与-Dubbo对比"><span class="toc-number">1.2.</span> <span class="toc-text">2. Spring Cloud 与 Dubbo对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-服务治理"><span class="toc-number">1.3.</span> <span class="toc-text">3. 服务治理</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -446,7 +572,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
